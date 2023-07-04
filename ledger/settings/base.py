@@ -52,6 +52,7 @@ LOCAL_APPS =[
 ]
 
 THIRD_PARTY_APPS = [
+    'treblle'
     # "rest_framework",
     # "django_filters",
     # "django_countries",
@@ -71,6 +72,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "treblle.middleware.TreblleMiddleware",
 ]
 
 ROOT_URLCONF = "ledger.urls"
@@ -145,6 +147,13 @@ MEDIA_ROOT = BASE_DIR / "mediafiles"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
+TREBLLE_HIDDEN_KEYS=['id']
+
+TREBLLE_INFO={
+    'api_key':env('TREBLLE_API_KEY'),
+    'project_id':env('TREBLLE_PROJECT_ID'),
+    'hidden_keyS':TREBLLE_HIDDEN_KEYS
+}
 
 
 import logging
