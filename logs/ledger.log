@@ -1,5 +1,0 @@
-2023-07-04 16:33:41,359 django.utils.autoreload INFO     Watching for file changes with StatReloader
-2023-07-04 16:34:19,943 django.utils.autoreload INFO     /home/madvirus/Documents/ledger-project/ledger/apps/common/apps.py changed, reloading.
-2023-07-04 16:34:21,373 django.utils.autoreload INFO     Watching for file changes with StatReloader
-2023-07-04 16:34:58,916 django.utils.autoreload INFO     /home/madvirus/Documents/ledger-project/ledger/apps/common/apps.py changed, reloading.
-2023-07-04 16:35:00,735 django.utils.autoreload INFO     Watching for file changes with StatReloader
