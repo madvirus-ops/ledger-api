@@ -13,6 +13,6 @@ from django.core.wsgi import get_wsgi_application
 
 from ledger.settings.base import env
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", f"ledger.settings.{env('SETTING')}")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", f"ledger.settings.{env('SETTINGS')}")
 
 application = get_wsgi_application()

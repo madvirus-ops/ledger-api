@@ -6,7 +6,6 @@ from ledger.settings.base import env
 
 def main():
     """Run administrative tasks."""
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "ledger.settings")
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", f'ledger.settings.{env("SETTINGS")}')
     try:
         from django.core.management import execute_from_command_line
