@@ -15,8 +15,16 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,include
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-]
+    path("api/v1/core/",include('apps.core.urls')),
+    path("api/v1/user/",include('apps.users.urls'))
+] + static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)
+
+admin.site.site_header = "Ledger API"
+admin.site.site_title = "Ledger API Header "
+admin.site.index_title = "Welcome to Ledger" 
